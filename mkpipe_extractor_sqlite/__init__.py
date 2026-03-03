@@ -2,6 +2,8 @@ import os
 
 from mkpipe.spark import JdbcExtractor
 
+JAR_PACKAGES = ['org.xerial:sqlite-jdbc:3.47.1.0']
+
 
 class SqliteExtractor(JdbcExtractor, variant='sqlite'):
     driver_name = 'sqlite'
