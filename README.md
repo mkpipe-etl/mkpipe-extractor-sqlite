@@ -72,7 +72,7 @@ pipelines:
 | `name` | string | required | SQLite table name |
 | `target_name` | string | required | Destination table name |
 | `replication_method` | `full` / `incremental` | `full` | Replication strategy |
-| `iterate_column` | string | — | Column used for incremental watermark |
+| `iterate_column` | string or list | — | Column(s) for incremental watermark. String for single column or SQL expression, list for multi-column OR logic |
 | `iterate_column_type` | `int` / `datetime` | — | Type of `iterate_column` |
 | `fetchsize` | int | `100000` | Rows per JDBC fetch |
 | `custom_query` | string | — | Override SQL with `{query_filter}` placeholder |
